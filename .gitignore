@@ -194,6 +194,6 @@ Scripts/
 Lib/
 include/
 pyvenv.cfg
-
+Rpabasic/crawl/image/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
