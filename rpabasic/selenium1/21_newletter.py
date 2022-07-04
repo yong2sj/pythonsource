@@ -80,7 +80,7 @@ start, num = 1, 1
 result = ""
 
 if page_cnt > 0:
-    for i in range(page_cnt):
+    for i in range(3):
         start = 1 + (i * 10)
         search_url = f"https://search.naver.com/search.naver?where=news&sm=tab_pge&query={keyword}&sort=1"
         search_url += "&photo=0&field=0&pd=0&ds=&de=&mynews=0"
@@ -122,6 +122,9 @@ b.find_element(By.ID, "inputPwd").send_keys("2gustnek!$")
 # 로그인 버튼클릭
 b.find_element(By.ID, "loginBtn").click()
 time.sleep(1)
+# 다음에하기 버튼 클릭
+b.find_element(By.CLASS_NAME, "link_next").click()
+time.sleep(1)
 
 b.find_element(By.CLASS_NAME, "link_num").click()
 time.sleep(1)
@@ -144,9 +147,9 @@ time.sleep(1)
 b.find_element(By.CLASS_NAME, "btn_html").click()
 time.sleep(1)
 
-b.find_element(By.CSS_SELECTOR, "#tx_canvas_source_holderc185 > textarea").send_keys(
+b.find_element(By.CSS_SELECTOR, ".tx-canvas textarea").send_keys(
     Keys.CONTROL, "v"
-)
+)  # tx_canvas_source_holderc116 > textarea
 time.sleep(1)
 
 # 전송버튼 클릭
